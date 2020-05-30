@@ -8,6 +8,8 @@
 namespace QColorContrastTest
 {
 
+/// Base class to implement unit tests with Qt Test that check color contrast
+/// according to the WCAG guidelines.
 class QCOLORCONTRASTTEST_EXPORT Base : public QObject
 {
     Q_OBJECT
