@@ -41,9 +41,9 @@ qreal Base::ContrastRatio(const QColor & c1, const QColor & c2) const
     const qreal l1 = RelativeLuminance(c1);
     const qreal l2 = RelativeLuminance(c2);
 
-    const qreal INC = 0.05f;
+    const qreal INC = 0.05;
     const qreal ratio = (l1 > l2) ? ((l2 + INC) / (l1 + INC)) : ((l1 + INC) / (l2 + INC));
-    return 1 / ratio;
+    return 1.0 / ratio;
 }
 
 qreal Base::RelativeLuminance(const QColor & color) const

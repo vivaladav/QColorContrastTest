@@ -15,6 +15,8 @@ class QCOLORCONTRASTTEST_EXPORT Base : public QObject
 public:
     Base(QObject * parent = nullptr);
 
+    qreal ContrastRatio(const QColor & c1, const QColor & c2) const;
+
 protected:
     bool TestSmallTextAA(const QColor & c1, const QColor & c2) const;
     bool TestSmallTextAAA(const QColor & c1, const QColor & c2) const;
@@ -22,7 +24,6 @@ protected:
     bool TestLargeTextAAA(const QColor & c1, const QColor & c2) const;
 
 private:
-    qreal ContrastRatio(const QColor & c1, const QColor & c2) const;
     qreal RelativeLuminance(const QColor & color) const;
     qreal ConvertChannel(qreal c) const;
 };
